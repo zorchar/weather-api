@@ -17,7 +17,7 @@ const geocode = async (city) => {
         else {
             throw {
                 status: 404,
-                message: 'Place not Found'
+                message: 'Place'
             }
         }
 
