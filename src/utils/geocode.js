@@ -26,9 +26,11 @@ const geocode = async (city) => {
     }
 }
 
-geocode('sdagdfha')
-    .then((res) => {
-        console.log(res);
-    }).catch((error) => {
-        console.log(error);
-    })
+// geocode('jerusalem')
+//     .then((res) => {
+//         console.log(res);
+//     }).catch((error) => {
+//         console.log(error);
+//     })
+
+module.exports = geocode

@@ -9,12 +9,13 @@ const forecast = async (lat, lon) => {
         // return result.data
         if (result.response = 200) {
             return {
+                name: result.data.name,
                 lon: result.data.coord.lon,
                 lat: result.data.coord.lat,
                 weather: result.data.weather[0].description,
                 temperature: result.data.main.temp,
                 humidity: result.data.main.humidity,
-                wind: result.data.wind,
+                wind: result.data.wind.speed,
             }
         }
     } catch (error) {
@@ -25,9 +26,11 @@ const forecast = async (lat, lon) => {
     }
 }
 
-forecast(32.088545, 3004.78254)
-    .then((res) => {
-        console.log(res);
-    }).catch((error) => {
-        console.log(error);
-    })
+// forecast(32.088545, 34.78254)
+//     .then((res) => {
+//         console.log(res);
+//     }).catch((error) => {
+//         console.log(error);
+//     })
+
+module.exports = forecast
